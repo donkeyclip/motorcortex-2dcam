@@ -1,5 +1,5 @@
-import MotorCortex from "@kissmybutton/motorcortex";
-import Player from "@kissmybutton/motorcortex-player";
+import MotorCortex from "@donkeyclip/motorcortex";
+import Player from "@donkeyclip/motorcortex-player";
 
 import MyPluginDefinition from "../dist/motorcortex-2dcam.umd";
 const MyPlugin = MotorCortex.loadPlugin(MyPluginDefinition);
@@ -28,7 +28,7 @@ const clip = new MotorCortex.HTMLClip({
   html: `
     <div class="container">
       <div class="img">
-        <img src="https://s23527.pcdn.co/wp-content/uploads/2017/09/bounce_umbrella.jpg.optimal.jpg" />
+        <img src="https://donkeyclip.github.io/motorcortex-slides/demo/assets/bg2.jpg" />
       </div>
     </div>`,
   css: `

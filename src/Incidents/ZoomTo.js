@@ -1,4 +1,4 @@
-import MotorCortex from "@kissmybutton/motorcortex";
+import MotorCortex from "@donkeyclip/motorcortex";
 import Adaptor from "../utils/Adaptor";
 
 /**
@@ -36,7 +36,7 @@ export default class MyEffect extends MotorCortex.Effect {
     });
   }
 
-  onProgress(fraction, millisecond) {
+  onProgress(fraction) {
     const vals = this.progressMethod(fraction);
     this.element.style.transform = `translateX(${vals.translateX}px) translateY(${vals.translateY}px) scaleX(${vals.scale}) scaleY(${vals.scale})`;
   }
