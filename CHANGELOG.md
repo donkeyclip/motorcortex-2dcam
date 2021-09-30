@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.16](https://www.github.com/donkeyclip/motorcortex-2dcam/compare/v0.0.15...v0.0.16) (2021-09-30)
+
+
+### Bug Fixes
+
+* update deps ([c7f1726](https://www.github.com/donkeyclip/motorcortex-2dcam/commit/c7f17261f56ee2877cd452ebfb692c4ccac8906a))
+
 ### [0.0.15](https://www.github.com/donkeyclip/motorcortex-2dcam/compare/v0.0.14...v0.0.15) (2021-09-24)
 
 
