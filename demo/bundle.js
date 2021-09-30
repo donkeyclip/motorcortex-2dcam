@@ -181,15 +181,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   }
 
   function c(t) {
-    return (c = Object.setPrototypeOf ? Object.getPrototypeOf : function (t) {
+    return c = Object.setPrototypeOf ? Object.getPrototypeOf : function (t) {
       return t.__proto__ || Object.getPrototypeOf(t);
-    })(t);
+    }, c(t);
   }
 
   function p(t, e) {
-    return (p = Object.setPrototypeOf || function (t, e) {
+    return p = Object.setPrototypeOf || function (t, e) {
       return t.__proto__ = e, t;
-    })(t, e);
+    }, p(t, e);
   }
 
   function h(t, e) {
@@ -400,7 +400,43 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         this.element.style.transform = "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scaleX(").concat(e.scale, ") scaleY(").concat(e.scale, ")");
       }
     }]), n;
-  }(n.default.Effect);
+  }(n.default.Effect),
+      d = function (t) {
+    l(n, t);
+    var e = f(n);
+
+    function n() {
+      return a(this, n), e.apply(this, arguments);
+    }
+
+    return s(n, [{
+      key: "onInitialise",
+      value: function value() {
+        var t = this.props.duration,
+            e = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        e.setAttributeNS(null, "d", this.targetValue.path), this.data = {
+          path: e,
+          finalPoint: null,
+          startPoint: null,
+          zoom: this.targetValue.zoom,
+          pathLength: e.getTotalLength(),
+          startFrom: this.attrs.from ? this.attrs.from : 0,
+          endTo: this.attrs.to ? this.attrs.to : 1,
+          transitionDuration: this.attrs.transition ? this.attrs.transition : 0,
+
+          get alongPathDuration() {
+            return t - this.transitionDuration;
+          }
+
+        }, this.data.finalPoint = e.getPointAtLength(this.data.endTo * this.data.pathLength), this.data.startPoint = e.getPointAtLength(this.data.startFrom * this.data.pathLength), this.targetValue.x = this.data.finalPoint.x, this.targetValue.y = this.data.finalPoint.y;
+      }
+    }, {
+      key: "onGetContext",
+      value: function value() {
+        this.adaptor = new y(this.element), this.data.zoom = this.targetValue.zoom, this.progressMethod = this.adaptor.createPathProgressFunction(this.data, this.initialValue);
+      }
+    }]), n;
+  }(m);
 
   return {
     npm_name: "@donkeyclip/motorcortex-2dcam",
@@ -436,42 +472,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         }
       }
     }, {
-      exportable: function (t) {
-        l(n, t);
-        var e = f(n);
-
-        function n() {
-          return a(this, n), e.apply(this, arguments);
-        }
-
-        return s(n, [{
-          key: "onInitialise",
-          value: function value() {
-            var t = this.props.duration,
-                e = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            e.setAttributeNS(null, "d", this.targetValue.path), this.data = {
-              path: e,
-              finalPoint: null,
-              startPoint: null,
-              zoom: this.targetValue.zoom,
-              pathLength: e.getTotalLength(),
-              startFrom: this.attrs.from ? this.attrs.from : 0,
-              endTo: this.attrs.to ? this.attrs.to : 1,
-              transitionDuration: this.attrs.transition ? this.attrs.transition : 0,
-
-              get alongPathDuration() {
-                return t - this.transitionDuration;
-              }
-
-            }, this.data.finalPoint = e.getPointAtLength(this.data.endTo * this.data.pathLength), this.data.startPoint = e.getPointAtLength(this.data.startFrom * this.data.pathLength), this.targetValue.x = this.data.finalPoint.x, this.targetValue.y = this.data.finalPoint.y;
-          }
-        }, {
-          key: "onGetContext",
-          value: function value() {
-            this.adaptor = new y(this.element), this.data.zoom = this.targetValue.zoom, this.progressMethod = this.adaptor.createPathProgressFunction(this.data, this.initialValue);
-          }
-        }]), n;
-      }(m),
+      exportable: d,
       name: "FollowPath",
       attributesValidationRules: {
         animatedAttrs: {
@@ -606,7 +607,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("98e4726ee86457910489")
+/******/ 		__webpack_require__.h = () => ("5f147cf55e3503c86117")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
