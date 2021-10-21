@@ -1,7 +1,7 @@
 import MotorCortex from "@donkeyclip/motorcortex";
 import Player from "@donkeyclip/motorcortex-player";
+import MyPluginDefinition from "../dist/motorcortex-2dcam.esm";
 
-import MyPluginDefinition from "../dist/motorcortex-2dcam.umd";
 const MyPlugin = MotorCortex.loadPlugin(MyPluginDefinition);
 
 const rootClip = new MotorCortex.HTMLClip({
