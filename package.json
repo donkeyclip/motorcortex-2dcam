@@ -5,7 +5,7 @@
   "main": "dist/motorcortex-2dcam.cjs.js",
   "module": "dist/motorcortex-2dcam.esm.js",
   "browser": "dist/motorcortex-2dcam.umd.js",
-  "author": "KissMyButton PC (kissmybutton.gr) <opensource@kissmybutton.gr>",
+  "author": "Donkeyclip (donkeyclip.com) <opensource@donkeyclip.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/donkeyclip/motorcortex-2dcam"

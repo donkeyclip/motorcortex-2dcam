@@ -65,7 +65,7 @@ const zoomto = new TDCAM.ZoomTo(
 
 The element that you want to zoom to (any element that you target via your selector) must have `transform-origin: top left`
 
-The expected attributes of ZoomTo include the animatedAttrs. This should contain the animated attribute `position`. 
+The expected attributes of ZoomTo include the animatedAttrs. This should contain the animated attribute `position`.
 Position is a composite attribute consisting of x, y and zoom, where x and y are the coordinates of our selected element we want to focus and zoom the zoom level we want to apply.
 All, x, y and zoom are optional and if not provided will not be affected during animation.
 
@@ -115,3 +115,9 @@ camera position to point 0 of our path, so we avoid the jump. If provided then t
 the carent camera position to the point 0 position in the given milliseconds. The total duration of the
 Incident will not be affected as the movement on the actual path will be
 less by "transition" milliseconds. "transition" of course is optional with default value = 0.
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg" width=250></img>](https://donkeyclip.com)
