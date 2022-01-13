@@ -11,6 +11,7 @@
 - [Creating Incidents](#creating-incidents)
   - [ZoomTo](#zoomto)
   - [FollowPath](#followpath)
+- [Adding Incidents in your clip](#adding-incidents-in-your-clip)
 - [Contributing](#contributing)
 - [License](#license)
 - [Sponsored by](#sponsored-by)
@@ -131,6 +132,12 @@ camera position to point 0 of our path, so we avoid the jump. If provided then t
 the carent camera position to the point 0 position in the given milliseconds. The total duration of the
 Incident will not be affected as the movement on the actual path will be
 less by "transition" milliseconds. "transition" of course is optional with default value = 0.
+
+# Adding Incidents in your clip
+
+```javascript
+clipName.addIncident(incidentName,startTime);
+```
 
 # Contributing 
 
