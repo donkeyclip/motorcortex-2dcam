@@ -2,7 +2,7 @@
 
 **Table of Contents**
 
-- [MotorMortex-2dcam](#motorcortex-2dcam)
+- [MotorCortex-2dcam](#motorcortex-2dcam)
   - [Demo](#demo)
 - [Intro / Features](#intro--features)
 - [Getting Started](#getting-started)
@@ -56,8 +56,8 @@ const TDCAM = loadPlugin(TDCAMDef);
 Any element can be selected by ZoomTo Incident and the camera will zoom
 on any of its points, on any duration and by any easing.
 Our viewport is always considered the parent of our target element. The
-virual camera will zoom to the given point of our target and will bring it in the middle
-of our viewport, in the middle of its parent element, zoomed as per attrs passed.
+virtual camera will zoom to the given point of our target and will bring it in the middle
+of our viewport, in the middle of its parent element, zoomed as per attributes passed.
 
 ```javascript
 const zoomto = new TDCAM.ZoomTo(
@@ -82,6 +82,7 @@ const zoomto = new TDCAM.ZoomTo(
 
 The element that you want to zoom to (any element that you target via your selector) must have `transform-origin: top left`
 
+### ZoomTo Attrs
 The expected attributes of ZoomTo include the animatedAttrs. This should contain the animated attribute `position`.
 Position is a composite attribute consisting of x, y and zoom, where x and y are the coordinates of our selected element we want to focus and zoom the zoom level we want to apply.
 All, x, y and zoom are optional and if not provided will not be affected during animation.
@@ -114,22 +115,22 @@ const fpath = new TDCAM.FollowPath(
   }
 );
 ```
-
-As you can see on the example, on our animatedAttrs we again used the position attribute but this
+### FollowPath Attrs
+As you can see in the example, on our animatedAttrs we again used the position attribute but this
 time we passed instead of x and y the `path` which we want our camera to follow.
 
 If you want your camera to move only on a part of a path you can use the `from` and `to` attributes
 that define the fraction (0 to 1) that you want your start and end point to be. E.g. if you
 provide the values `from: 0.2` and `to: 0.9` then the camera will start from the 20% of the path's overall length and
-will animate all the way to the 90% of its length. Of course both start and end are optional and have
+will animate all the way to the 90% of its length. Of course, both start and end are optional and have
 default values 0 and 1 respectively.
 
-As we are moving our camera along a path, on the 0 millisecond of our Incident our camera will be placed on
+As we are moving our camera along a path, at the 0 millisecond of our Incident our camera will be placed on
 the very first point of the provided path. This can cause a "jump" effect as the camera will
 move to point 0 without animation. In order to handle this the `transition` attribute
 is provided. If provided, transition defines (in milliseconds) an optional transition time from the current
-camera position to point 0 of our path, so we avoid the jump. If provided then the camera will lineary move from
-the carent camera position to the point 0 position in the given milliseconds. The total duration of the
+camera position to point 0 of our path, so we avoid the jump. If provided then the camera will linearly move from
+the current camera position to the point 0 position in the given milliseconds. The total duration of the
 Incident will not be affected as the movement on the actual path will be
 less by "transition" milliseconds. "transition" of course is optional with default value = 0.
 
