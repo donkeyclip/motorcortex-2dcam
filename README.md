@@ -22,9 +22,9 @@
 
 # Intro / Features
 
-MotorCortex-2dcam acts exaclty as a 2d camera that can focus and zoom on
+MotorCortex-2dcam acts exactly as a 2d camera that can focus and zoom at
 any given point of any element.
-You can move your camera around, zoom and unzoom, follow paths, all
+You can move your camera around, zoom in and out, follow paths, all
 via its easy to use Incidents.
 
 This Plugin exposes two Incidents:
@@ -54,7 +54,7 @@ const TDCAM = loadPlugin(TDCAMDef);
 ## ZoomTo
 
 Any element can be selected by ZoomTo Incident and the camera will zoom
-on any of its points, on any duration and by any easing.
+to any of its points, on any duration and by any easing.
 Our viewport is always considered the parent of our target element. The
 virtual camera will zoom to the given point of our target and will bring it in the middle
 of our viewport, in the middle of its parent element, zoomed as per attributes passed.
