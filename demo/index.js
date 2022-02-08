@@ -11,19 +11,19 @@ const rootClip = new MotorCortex.HTMLClip({
     </div>`,
   css: `
     .container, .casi-container{
-      width: 640px;
-      height: 360px;
+      width: 1920px;
+      height: 1095px;
       background: black;
     }
   `,
   host: document.getElementById("clip"),
   containerParams: {
-    width: "640px",
-    height: "360px",
+    width: "1920px",
+    height: "1095px",
   },
 });
 
-const mypath = "M 1280 150 L 1380 464";
+const mypath = "M 500 250 L 960 547.6";
 const clip = new MotorCortex.HTMLClip({
   html: `
     <div class="container">
@@ -33,21 +33,20 @@ const clip = new MotorCortex.HTMLClip({
     </div>`,
   css: `
     .container{
-        width: 640px;
-        height: 360px;
+        width: 1920px;
+        height: 1095px;
         background: black;
     }
     .img{
-        width: 1200px;
-        height: 550px;
-        transform: scale(0.34);
+        width: 1920px;
+        height: 1095px;
         transform-origin: top left;
     }
   `,
   selector: ".casi-container",
   containerParams: {
-    width: "640px",
-    height: "360px",
+    width: "1920px",
+    height: "1095px",
   },
 });
 
@@ -57,11 +56,18 @@ const zoomTo1 = new MyPlugin.ZoomTo(
   {
     animatedAttrs: {
       position: {
-        x: 700,
-        y: 342,
-        zoom: 0.7,
+        x: 1075, 
+        y: 678, 
+        zoom: 1.2,
       },
     },
+    initialValues:{
+      position: {
+        x: 1920/2, 
+        y: 1095/2, 
+        zoom: 1,
+      },
+    }
   },
   {
     selector: ".img",
@@ -74,9 +80,9 @@ const zoomTo2 = new MyPlugin.ZoomTo(
   {
     animatedAttrs: {
       position: {
-        x: 1280,
-        y: 150,
-        zoom: 1.2,
+        x: 500, 
+        y: 250, 
+        zoom: 2,
       },
     },
   },
@@ -86,6 +92,7 @@ const zoomTo2 = new MyPlugin.ZoomTo(
     easing: "easeInOutSine",
   }
 );
+
 
 const pop1 = new MyPlugin.FollowPath(
   {
