@@ -2611,7 +2611,7 @@ var FollowPath = /*#__PURE__*/function (_ZoomTo) {
 }(MyEffect);
 
 var name = "@donkeyclip/motorcortex-2dcam";
-var version = "0.0.16";
+var version = "0.1.0";
 
 var index = {
   npm_name: name,
