@@ -2512,8 +2512,8 @@ var MyEffect = /*#__PURE__*/function (_MotorCortex$Effect) {
     }
   }, {
     key: "onProgress",
-    value: function onProgress(fraction) {
-      var vals = this.progressMethod(fraction);
+    value: function onProgress(m) {
+      var vals = this.progressMethod(this.getFraction(m));
       this.element.style.transform = "translateX(".concat(vals.translateX, "px) translateY(").concat(vals.translateY, "px) scaleX(").concat(vals.scale, ") scaleY(").concat(vals.scale, ")");
     }
   }]);
