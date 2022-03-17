@@ -36,8 +36,8 @@ export default class MyEffect extends MotorCortex.Effect {
     });
   }
 
-  onProgress(fraction) {
-    const vals = this.progressMethod(fraction);
+  onProgress(m) {
+    const vals = this.progressMethod(this.getFraction(m));
     this.element.style.transform = `translateX(${vals.translateX}px) translateY(${vals.translateY}px) scaleX(${vals.scale}) scaleY(${vals.scale})`;
   }
 }
