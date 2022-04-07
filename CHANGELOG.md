@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/donkeyclip/motorcortex-2dcam/compare/v0.1.0...v0.2.0) (2022-04-07)
+
+
+### Features
+
+* Drop Explorer 11 support ([18a8621](https://github.com/donkeyclip/motorcortex-2dcam/commit/18a862163b1ff122aee9687f9330a370ec0c944b))
+
 ## [0.1.0](https://www.github.com/donkeyclip/motorcortex-2dcam/compare/v0.0.16...v0.1.0) (2022-03-17)
 
 
