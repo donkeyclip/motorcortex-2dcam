@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/donkeyclip/motorcortex-2dcam/compare/v0.2.0...v0.3.0) (2022-04-07)
+
+
+### Features
+
+* update compatibility with motorcortex ([f97769b](https://github.com/donkeyclip/motorcortex-2dcam/commit/f97769bac17d9783da48c40c1dc4666aa9dc8244))
+
 ## [0.2.0](https://github.com/donkeyclip/motorcortex-2dcam/compare/v0.1.0...v0.2.0) (2022-04-07)
 
 
