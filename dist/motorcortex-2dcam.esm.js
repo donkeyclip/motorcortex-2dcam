@@ -1,4 +1,4 @@
-import MotorCortex from '@donkeyclip/motorcortex';
+import { Effect } from '@donkeyclip/motorcortex';
 
 function getMatrix2D(element) {
   const win = window;
@@ -235,7 +235,7 @@ class Adaptor {
  *
  **/
 
-class MyEffect extends MotorCortex.Effect {
+class MyEffect extends Effect {
   /**
    * the scratch value of the Incident should return back the triplette
    * x, y, zoom

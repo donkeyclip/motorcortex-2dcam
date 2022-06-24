@@ -1,10 +1,6 @@
 'use strict';
 
-var MotorCortex = require('@donkeyclip/motorcortex');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var MotorCortex__default = /*#__PURE__*/_interopDefaultLegacy(MotorCortex);
+var motorcortex = require('@donkeyclip/motorcortex');
 
 function getMatrix2D(element) {
   const win = window;
@@ -241,7 +237,7 @@ class Adaptor {
  *
  **/
 
-class MyEffect extends MotorCortex__default["default"].Effect {
+class MyEffect extends motorcortex.Effect {
   /**
    * the scratch value of the Incident should return back the triplette
    * x, y, zoom

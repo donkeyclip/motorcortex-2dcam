@@ -1,4 +1,4 @@
-import MotorCortex from "@donkeyclip/motorcortex";
+import { Effect } from "@donkeyclip/motorcortex";
 import Adaptor from "../utils/Adaptor";
 
 /**
@@ -14,7 +14,7 @@ import Adaptor from "../utils/Adaptor";
  * which are analysed more inline
  *
  **/
-export default class MyEffect extends MotorCortex.Effect {
+export default class MyEffect extends Effect {
   /**
    * the scratch value of the Incident should return back the triplette
    * x, y, zoom
