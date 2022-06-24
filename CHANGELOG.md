@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.3.1](https://github.com/donkeyclip/motorcortex-2dcam/compare/v0.3.0...v0.3.1) (2022-06-24)
+
+
+### Bug Fixes
+
+* import only effect instead of full MC ([f553415](https://github.com/donkeyclip/motorcortex-2dcam/commit/f5534153955eef5bee358c8f56fc05bbf5f654f5))
+
 ## [0.3.0](https://github.com/donkeyclip/motorcortex-2dcam/compare/v0.2.0...v0.3.0) (2022-04-07)
 
 

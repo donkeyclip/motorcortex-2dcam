@@ -341,7 +341,7 @@ class FollowPath extends MyEffect {
 }
 
 var name = "@donkeyclip/motorcortex-2dcam";
-var version = "0.3.0";
+var version = "0.3.1";
 
 var index = {
   npm_name: name,
