@@ -1,10 +1,10 @@
-import MotorCortex from "@donkeyclip/motorcortex";
+import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
 import Player from "@donkeyclip/motorcortex-player";
 import MyPluginDefinition from "../dist/motorcortex-2dcam.esm";
 
-const MyPlugin = MotorCortex.loadPlugin(MyPluginDefinition);
+const MyPlugin = loadPlugin(MyPluginDefinition);
 
-const rootClip = new MotorCortex.HTMLClip({
+const rootClip = new HTMLClip({
   html: `
     <div class="container">
       <div class="casi-container"></div>
@@ -24,7 +24,7 @@ const rootClip = new MotorCortex.HTMLClip({
 });
 
 const mypath = "M 500 250 L 960 547.6";
-const clip = new MotorCortex.HTMLClip({
+const clip = new HTMLClip({
   html: `
     <div class="container">
       <div class="img">
@@ -56,18 +56,18 @@ const zoomTo1 = new MyPlugin.ZoomTo(
   {
     animatedAttrs: {
       position: {
-        x: 1075, 
-        y: 678, 
+        x: 1075,
+        y: 678,
         zoom: 1.2,
       },
     },
-    initialValues:{
+    initialValues: {
       position: {
-        x: 1920/2, 
-        y: 1095/2, 
+        x: 1920 / 2,
+        y: 1095 / 2,
         zoom: 1,
       },
-    }
+    },
   },
   {
     selector: ".img",
@@ -80,8 +80,8 @@ const zoomTo2 = new MyPlugin.ZoomTo(
   {
     animatedAttrs: {
       position: {
-        x: 500, 
-        y: 250, 
+        x: 500,
+        y: 250,
         zoom: 2,
       },
     },
@@ -92,7 +92,6 @@ const zoomTo2 = new MyPlugin.ZoomTo(
     easing: "easeInOutSine",
   }
 );
-
 
 const pop1 = new MyPlugin.FollowPath(
   {
